@@ -22,6 +22,11 @@ config/icon="res://icon.png"
 
 GLOBALS="*res://scripts/GLOBALS.gd"
 
+[display]
+
+window/size/width=750
+window/size/height=1334
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
