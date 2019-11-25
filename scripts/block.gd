@@ -15,7 +15,6 @@ func _ready():
 
 
 func _on_input_event(camera, event, click_position, click_normal, shape_idx):
-	print('hit')
 	if(event.is_pressed()):
 		get_node(".").queue_free()
 	pass # Replace with function body.
