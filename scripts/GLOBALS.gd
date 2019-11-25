@@ -9,9 +9,11 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 func _process(delta):
 	if(win):
-		print(win)
+		goto_scene("res://gui/menu/win.tscn")
+		var win = false
+		var lose = false
 	if(lose):
-		goto_scene("res://Root.tscn")
+		goto_scene("res://gui/menu/lose.tscn")
 		var win = false
 		var lose = false
 	pass

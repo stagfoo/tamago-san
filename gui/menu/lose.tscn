@@ -1,24 +1,17 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://gui/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://gui/menu/quit.png" type="Texture" id=2]
-[ext_resource path="res://gui/menu/level 1.png" type="Texture" id=3]
-[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=4]
+[ext_resource path="res://gui/menu/you-lose.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
+bg_color = Color( 0.231373, 0.137255, 0.443137, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.917647, 0.45098, 0.309804, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.878431, 0.423529, 0.282353, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
+bg_color = Color( 0.231373, 0.137255, 0.443137, 1 )
 
 [node name="Menu" type="Node2D"]
 
@@ -46,22 +39,20 @@ texture = ExtResource( 2 )
 
 [node name="Start Game" type="Button" parent="ItemList"]
 editor/display_folded = true
-margin_left = 114.889
-margin_top = 695.798
-margin_right = 632.889
-margin_bottom = 894.798
-rect_scale = Vector2( 0.991667, 0.709565 )
-custom_styles/hover = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+margin_left = 139.907
+margin_top = 1095.98
+margin_right = 599.907
+margin_bottom = 1269.98
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 action_mode = 0
 
-[node name="level 1" type="Sprite" parent="ItemList/Start Game"]
-position = Vector2( 253.82, 92.7396 )
-scale = Vector2( 1.0084, 1.43361 )
-texture = ExtResource( 3 )
+[node name="quit" type="Sprite" parent="ItemList/Start Game"]
+position = Vector2( 223.189, 87.9778 )
+texture = ExtResource( 2 )
 
-[node name="Logo" type="Sprite" parent="ItemList"]
-position = Vector2( 379.245, 332.127 )
-texture = ExtResource( 4 )
+[node name="you-lose" type="Sprite" parent="."]
+position = Vector2( 375.982, 649.633 )
+texture = ExtResource( 3 )
 [connection signal="pressed" from="ItemList/End Game" to="ItemList" method="_on_Button_pressed"]
 [connection signal="pressed" from="ItemList/Start Game" to="ItemList" method="_on_Button_pressed"]

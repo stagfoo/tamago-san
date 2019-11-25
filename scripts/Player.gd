@@ -8,7 +8,7 @@ func _ready():
 func _on_RigidBody_body_entered(body):
 	var name = body.get_name()
 	print('Egg-san hit', name)
-	if(name == 'Floor'):
+	if(name == 'table'):
 		# set var in GLOBAL
 		self.queue_free()
 		GLOBALS.win = false
