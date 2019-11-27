@@ -25,7 +25,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 
 [node name="Egg-san" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.215571, 16.3899, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.403, 0 )
 
 [node name="table" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1.32398, 0, -1.15746e-07, 0, 1, 0, 1.13373e-07, 0, -1.29683, 0, -0.384429, -1.21835 )
@@ -44,11 +44,13 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 0.03, 0, 14.3895, 1.35138 )
 shape = SubResource( 1 )
 
 [node name="Border - Left" type="CollisionShape" parent="Borders/StaticBody"]
-transform = Transform( -2.18557e-07, 0, -0.037, 0, 5, 0, 5, 0, -1.61732e-09, -8.19226, 4.95475, -15.2764 )
+transform = Transform( -2.18557e-07, 0, -0.037, 0, 5, 0, 5, 0, -1.61732e-09, -8.19226, 4.95475, 0.00976664 )
+visible = false
 shape = SubResource( 1 )
 
 [node name="Border - ight" type="CollisionShape" parent="Borders/StaticBody"]
-transform = Transform( -2.18551e-07, 0.0379393, -0.0369989, 1.65838e-09, 4.99986, 0.000280751, 5, 0, -1.61732e-09, 9.27554, 4.98389, -15.6003 )
+transform = Transform( -2.18551e-07, 0.0379393, -0.0369989, 1.65838e-09, 4.99986, 0.000280751, 5, 0, -1.61732e-09, 9.27554, 4.98389, -0.00370592 )
+visible = false
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
@@ -63,7 +65,12 @@ axis_lock_linear_z = true
 axis_lock_angular_y = true
 
 [node name="Leek2" parent="." instance=ExtResource( 5 )]
-transform = Transform( -2.89178e-08, -0.228769, -0.661562, -9.99983e-09, 0.661562, -0.228769, 0.7, 0, -3.0598e-08, 0, 11.6162, 0 )
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 0, 10.4964, 0 )
+axis_lock_linear_z = true
+axis_lock_angular_y = true
+
+[node name="Leek3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 0, 12.5919, 0 )
 axis_lock_linear_z = true
 axis_lock_angular_y = true
 

@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/models/egg.glb" type="PackedScene" id=2]
 [ext_resource path="res://assets/textures/faces/default.png" type="Texture" id=3]
 [ext_resource path="res://assets/textures/faces/dead.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/faces/happy.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/faces/squeeze.png" type="Texture" id=6]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -25,12 +27,24 @@ shape = SubResource( 2 )
 [node name="Scene Root" parent="." instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
-[node name="default" type="Sprite3D" parent="."]
+[node name="face" type="Spatial" parent="."]
+
+[node name="default" type="Sprite3D" parent="face"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.828755 )
 texture = ExtResource( 3 )
 
-[node name="death" type="Sprite3D" parent="."]
+[node name="death" type="Sprite3D" parent="face"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.828755 )
 visible = false
 texture = ExtResource( 4 )
+
+[node name="happy" type="Sprite3D" parent="face"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.872352 )
+visible = false
+texture = ExtResource( 5 )
+
+[node name="weird" type="Sprite3D" parent="face"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.872352 )
+visible = false
+texture = ExtResource( 6 )
 [connection signal="body_entered" from="." to="." method="_on_RigidBody_body_entered"]

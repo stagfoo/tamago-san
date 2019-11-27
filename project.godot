@@ -16,7 +16,6 @@ _global_script_class_icons={
 [application]
 
 config/name="Tamago-san"
-run/main_scene="res://Root.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -29,3 +28,7 @@ window/size/width=375
 window/size/height=667
 window/handheld/orientation="portrait"
 window/stretch/aspect="expand"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
