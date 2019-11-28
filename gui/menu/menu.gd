@@ -10,9 +10,14 @@ func _process(delta):
 	pass
 func _on_Button_pressed():
 	if(START_BUTTON.pressed):
+		GLOBALS.lose = false
+		GLOBALS.win = false
 		GLOBALS.goto_scene("res://levels/level1.tscn")
 		return
 	if(END_BUTTON.pressed):
-		get_tree().quit()
+		GLOBALS.lose = false
+		GLOBALS.win = false
+		GLOBALS.goto_scene("res://Root.tscn")
+		#get_tree().quit()
 		return
 	pass
