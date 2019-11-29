@@ -7,7 +7,6 @@ func _ready():
 
 func _on_RigidBody_body_entered(body):
 	var name = body.get_name()
-	print(name, "hit the bowl")
 	if(name == 'Egg-san'):
 		print('you WIN')
 		GLOBALS.win = true

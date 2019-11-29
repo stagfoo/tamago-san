@@ -11,14 +11,16 @@ absorbent = true
 [sub_resource type="CylinderShape" id=2]
 
 [node name="Bowl" type="RigidBody"]
+input_ray_pickable = false
 physics_material_override = SubResource( 1 )
 contacts_reported = 10
 contact_monitor = true
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 2.42783, 0, 0, 0, 0.857605, 0, 0, 0, 1.98725, 0, 0.130494, 0 )
+transform = Transform( 4.33872, 0, 0, 0, 1.63851, 0, 0, 0, 4, 0, 1.85427, 0.0160632 )
 shape = SubResource( 2 )
 
 [node name="Scene Root" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.39712, 0 )
 [connection signal="body_entered" from="." to="." method="_on_RigidBody_body_entered"]

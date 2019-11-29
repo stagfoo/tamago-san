@@ -12,7 +12,7 @@ func _on_Button_pressed():
 	if(START_BUTTON.pressed):
 		GLOBALS.lose = false
 		GLOBALS.win = false
-		GLOBALS.goto_scene("res://levels/level1.tscn")
+		GLOBALS.goto_scene("res://levels/Level-1.tscn")
 		return
 	if(END_BUTTON.pressed):
 		GLOBALS.lose = false

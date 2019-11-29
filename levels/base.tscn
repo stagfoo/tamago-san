@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://parts/table.tscn" type="PackedScene" id=1]
+[ext_resource path="res://parts/Bowl.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 1
+background_color = Color( 0.886275, 0.376471, 0.219608, 1 )
+ambient_light_color = Color( 0.905882, 0.662745, 0.247059, 1 )
+
+[node name="Base" type="Spatial"]
+
+[node name="table" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.32398, 0, -1.15746e-07, 0, 1, 0, 1.13373e-07, 0, -1.29683, 0, -0.384429, -1.21835 )
+
+[node name="Wall" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.35034, 8.74228e-08, -1.61487e-07, 1.5441e-07, -1.05612e-07, 2.41613, 1.18051e-07, -1, -4.37114e-08, -0.351764, 15.2978, -9.23686 )
+
+[node name="Borders" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="StaticBody" type="StaticBody" parent="Borders"]
+
+[node name="Border - Left" type="CollisionShape" parent="Borders/StaticBody"]
+transform = Transform( -3.7146e-07, 0, -0.037, 0, 3.27163, 0, 8.49801, 0, -1.61732e-09, -16.104, 3.0943, -0.931058 )
+shape = SubResource( 1 )
+
+[node name="Border - Front" type="CollisionShape" parent="Borders/StaticBody"]
+transform = Transform( -16.5157, 0, 0.00046635, 0, 3.27163, 0, -0.208181, 0, -0.0369971, -0.781303, 3.0943, 7.47154 )
+visible = false
+shape = SubResource( 1 )
+
+[node name="Border - ight" type="CollisionShape" parent="Borders/StaticBody"]
+transform = Transform( -3.54311e-07, 0.0379393, -0.0369969, 1.75923e-09, 3.27154, 0.000429045, 8.10616, 9.48282e-10, -1.61718e-09, 15.5994, 3.31238, -0.448515 )
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.81927, 20.8275 )
+current = true
+
+[node name="Bowl" parent="." instance=ExtResource( 2 )]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
