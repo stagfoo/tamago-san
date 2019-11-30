@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://gui/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://gui/menu/quit.png" type="Texture" id=2]
-[ext_resource path="res://gui/menu/level 1.png" type="Texture" id=3]
-[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=4]
+[ext_resource path="res://gui/menu/level-1.png" type="Texture" id=3]
+[ext_resource path="res://gui/menu/level-2.png" type="Texture" id=4]
+[ext_resource path="res://gui/menu/level-3.png" type="Texture" id=5]
+[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=6]
+[ext_resource path="res://gui/menu/round 1.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
@@ -15,9 +18,6 @@ bg_color = Color( 0.917647, 0.45098, 0.309804, 1 )
 bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.878431, 0.423529, 0.282353, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
 
 [node name="Menu" type="Node2D"]
@@ -50,24 +50,115 @@ position = Vector2( 198.078, 83.4778 )
 scale = Vector2( 0.888889, 0.888889 )
 texture = ExtResource( 2 )
 
-[node name="Start Game" type="Button" parent="ItemList"]
+[node name="Level_1" type="Button" parent="ItemList"]
 editor/display_folded = true
-margin_top = 373.0
-margin_right = 373.0
-margin_bottom = 534.0
+margin_left = 29.0
+margin_top = 391.438
+margin_right = 109.0
+margin_bottom = 490.438
 rect_scale = Vector2( 0.991667, 0.709565 )
-custom_styles/hover = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
 action_mode = 0
+flat = true
 
-[node name="level 1" type="Sprite" parent="ItemList/Start Game"]
-position = Vector2( 188.129, 68.0766 )
-scale = Vector2( 0.635326, 0.903222 )
+[node name="text" type="Sprite" parent="ItemList/Level_1"]
+position = Vector2( 38.1972, 48.8725 )
+scale = Vector2( 0.575378, 0.720937 )
+texture = ExtResource( 3 )
+
+[node name="Level_2" type="Button" parent="ItemList"]
+editor/display_folded = true
+margin_left = 143.001
+margin_top = 391.438
+margin_right = 223.001
+margin_bottom = 490.438
+rect_scale = Vector2( 0.991667, 0.709565 )
+custom_styles/normal = SubResource( 4 )
+action_mode = 0
+flat = true
+
+[node name="text" type="Sprite" parent="ItemList/Level_2"]
+position = Vector2( 37.7558, 48.8725 )
+scale = Vector2( 0.575378, 0.720937 )
+texture = ExtResource( 4 )
+
+[node name="Level_3" type="Button" parent="ItemList"]
+editor/display_folded = true
+margin_left = 258.203
+margin_top = 391.0
+margin_right = 335.203
+margin_bottom = 490.0
+rect_scale = Vector2( 0.991667, 0.709565 )
+custom_styles/normal = SubResource( 4 )
+action_mode = 0
+flat = true
+
+[node name="text" type="Sprite" parent="ItemList/Level_3"]
+position = Vector2( 39.0802, 49.4895 )
+scale = Vector2( 0.575378, 0.720937 )
+texture = ExtResource( 5 )
+
+[node name="Level_4" type="Button" parent="ItemList"]
+editor/display_folded = true
+margin_left = -192.021
+margin_top = 458.615
+margin_right = -112.021
+margin_bottom = 557.615
+rect_scale = Vector2( 0.991667, 0.709565 )
+custom_styles/normal = SubResource( 4 )
+action_mode = 0
+flat = true
+
+[node name="text" type="Sprite" parent="ItemList/Level_4"]
+position = Vector2( 46.1437, 48.8725 )
+scale = Vector2( 0.575378, 0.720937 )
+texture = ExtResource( 3 )
+
+[node name="Level_5" type="Button" parent="ItemList"]
+editor/display_folded = true
+margin_left = -154.806
+margin_top = 332.946
+margin_right = -74.8064
+margin_bottom = 431.946
+rect_scale = Vector2( 0.991667, 0.709565 )
+custom_styles/normal = SubResource( 4 )
+action_mode = 0
+flat = true
+
+[node name="text" type="Sprite" parent="ItemList/Level_5"]
+position = Vector2( 45.2608, 48.8725 )
+scale = Vector2( 0.575378, 0.720937 )
+texture = ExtResource( 3 )
+
+[node name="Level_6" type="Button" parent="ItemList"]
+editor/display_folded = true
+margin_left = -104.806
+margin_top = 392.946
+margin_right = -24.8064
+margin_bottom = 491.946
+rect_scale = Vector2( 0.991667, 0.709565 )
+custom_styles/normal = SubResource( 4 )
+action_mode = 0
+flat = true
+
+[node name="text" type="Sprite" parent="ItemList/Level_6"]
+position = Vector2( 45.7023, 49.4895 )
+scale = Vector2( 0.575378, 0.720937 )
 texture = ExtResource( 3 )
 
 [node name="Logo" type="Sprite" parent="ItemList"]
 position = Vector2( 184.12, 142.127 )
 scale = Vector2( 0.544355, 0.544355 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
+
+[node name="round 1" type="Sprite" parent="."]
+position = Vector2( 180, 345.25 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
 [connection signal="pressed" from="ItemList/End Game" to="ItemList" method="_on_Button_pressed"]
-[connection signal="pressed" from="ItemList/Start Game" to="ItemList" method="_on_Button_pressed"]
+[connection signal="pressed" from="ItemList/Level_1" to="ItemList" method="_on_Button_pressed"]
+[connection signal="pressed" from="ItemList/Level_2" to="ItemList" method="_on_Button_pressed"]
+[connection signal="pressed" from="ItemList/Level_3" to="ItemList" method="_on_Button_pressed"]
+[connection signal="pressed" from="ItemList/Level_4" to="ItemList" method="_on_Button_pressed"]
+[connection signal="pressed" from="ItemList/Level_5" to="ItemList" method="_on_Button_pressed"]
+[connection signal="pressed" from="ItemList/Level_6" to="ItemList" method="_on_Button_pressed"]

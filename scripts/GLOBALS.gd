@@ -3,6 +3,7 @@ extends Node
 var current_scene = null
 var win = false
 var lose = false
+var winTimer = 0
 
 func _ready():
 	var root = get_tree().get_root()

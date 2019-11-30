@@ -9,7 +9,6 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_input_event(camera, event, click_position, click_normal, shape_idx):
-	print(event)
 	if(event.is_pressed()):
 		get_node(".").queue_free()
 	pass # Replace with function body.

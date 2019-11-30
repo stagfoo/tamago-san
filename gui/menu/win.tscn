@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://gui/menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://gui/menu/win-lose-.gd" type="Script" id=1]
 [ext_resource path="res://gui/menu/quit.png" type="Texture" id=2]
 [ext_resource path="res://gui/menu/you-win.png" type="Texture" id=3]
 
@@ -38,24 +38,8 @@ visible = false
 position = Vector2( 223.189, 87.9778 )
 texture = ExtResource( 2 )
 
-[node name="Start Game" type="Button" parent="ItemList"]
-editor/display_folded = true
-visible = false
-margin_left = 139.907
-margin_top = 1095.98
-margin_right = 599.907
-margin_bottom = 1269.98
-custom_styles/hover = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-action_mode = 0
-
-[node name="quit" type="Sprite" parent="ItemList/Start Game"]
-position = Vector2( 223.189, 87.9778 )
-texture = ExtResource( 2 )
-
 [node name="you-win" type="Sprite" parent="."]
 position = Vector2( 183.319, 331.838 )
 scale = Vector2( 0.455752, 0.455752 )
 texture = ExtResource( 3 )
 [connection signal="pressed" from="ItemList/End Game" to="ItemList" method="_on_Button_pressed"]
-[connection signal="pressed" from="ItemList/Start Game" to="ItemList" method="_on_Button_pressed"]

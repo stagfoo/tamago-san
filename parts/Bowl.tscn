@@ -18,9 +18,9 @@ contact_monitor = true
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 4.33872, 0, 0, 0, 1.63851, 0, 0, 0, 4, 0, 1.85427, 0.0160632 )
+transform = Transform( 3, 0, 0, 0, 1.4735, 0, 0, 0, 3.31398, 0, 0.536766, 0.0160632 )
 shape = SubResource( 2 )
 
 [node name="Scene Root" parent="." instance=ExtResource( 2 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.39712, 0 )
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.575992, 0 )
 [connection signal="body_entered" from="." to="." method="_on_RigidBody_body_entered"]
