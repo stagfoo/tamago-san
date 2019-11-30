@@ -1,15 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://parts/Egg.tscn" type="PackedScene" id=1]
-[ext_resource path="res://parts/leek.tscn" type="PackedScene" id=2]
-[ext_resource path="res://levels/base.tscn" type="PackedScene" id=3]
+[ext_resource path="res://parts/Naruto.tscn" type="PackedScene" id=2]
+[ext_resource path="res://parts/leek.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/base.tscn" type="PackedScene" id=4]
 
 [node name="Level-1" type="Spatial"]
 
 [node name="Egg-san" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.0361, 0 )
 
-[node name="Leek" parent="." instance=ExtResource( 2 )]
+[node name="Naruto" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.0556432, 0, 0.998451, 0, 1, 0, -0.998451, 0, -0.0556432, -2.57536, 5.57154, 0 )
+
+[node name="Naruto2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.038993, 0, 0.99924, 0, 1, 0, -0.99924, 0, -0.038993, 2.11053, 5.25331, 0 )
+
+[node name="Leek" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.047938, 0, 0.99885, 0, 1, 0, -0.99885, 0, 0.047938, -2.27345, 10.4719, -0.339111 )
 
-[node name="Base" parent="." instance=ExtResource( 3 )]
+[node name="Base" parent="." instance=ExtResource( 4 )]
