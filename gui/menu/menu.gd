@@ -4,6 +4,7 @@ onready var LEVEL_1 = get_node("Level_1")
 onready var LEVEL_2 = get_node("Level_2")
 onready var LEVEL_3 = get_node("Level_3")
 onready var LEVEL_4 = get_node("Level_4")
+onready var LEVEL_5 = get_node("Level_5")
 onready var END_BUTTON =  get_node("End Game")
 onready var LOADING =  get_node("/root/Loading")
 
@@ -31,6 +32,10 @@ func _on_Button_pressed():
 		return
 	if(LEVEL_4.pressed):
 		GLOBALS.goto_scene("res://levels/Level-4.tscn")
+		GLOBALS.loading = false
+		return
+	if(LEVEL_5.pressed):
+		GLOBALS.goto_scene("res://levels/Level-5.tscn")
 		GLOBALS.loading = false
 		return
 	pass
