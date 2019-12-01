@@ -24,6 +24,8 @@ config/icon="res://icon.png"
 [autoload]
 
 GLOBALS="*res://scripts/GLOBALS.gd"
+Loading="*res://gui/Loading.tscn"
+base="res://levels/base.tscn"
 
 [display]
 

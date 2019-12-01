@@ -19,9 +19,9 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5524
 transform = Transform( -4.19718e-08, 0.279305, 0.960202, 1.22088e-08, 0.960202, -0.279305, -1, 0, -4.37114e-08, 4.52727, 9.15686, 0 )
 
 [node name="bamboo" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4.99933, 0 )
 
 [node name="Bowl" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.967929, 1.37462, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85543, 1.37462, 0 )
 
 [node name="Base" parent="." instance=ExtResource( 6 )]

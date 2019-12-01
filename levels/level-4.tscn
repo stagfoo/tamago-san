@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://parts/leek.tscn" type="PackedScene" id=1]
+[ext_resource path="res://parts/Egg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://parts/buta.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/base.tscn" type="PackedScene" id=4]
+[ext_resource path="res://parts/Bowl.tscn" type="PackedScene" id=5]
+
+[node name="Level-4" type="Spatial"]
+
+[node name="Leek" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.179427, 3.80914, 0 )
+
+[node name="Egg-san" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0477027, 12.2891, -0.0133557 )
+
+[node name="Buta" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, -1.81053, 5.39458, 0 )
+
+[node name="Buta5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 2.33291, 5.39458, 0 )
+
+[node name="Buta4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 0.190647, 9.445, 0 )
+
+[node name="Buta2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.00889455, 4.33209e-08, 0.99996, 0.99996, 4.40985e-08, 0.00889455, -4.37114e-08, 1, -4.37114e-08, -1.78725, 8.3775, 0 )
+
+[node name="Buta3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.00647371, 4.34275e-08, 0.999979, 0.999979, 4.39934e-08, 0.00647371, -4.37114e-08, 1, -4.37114e-08, 2.33529, 8.55607, 0 )
+
+[node name="Base" parent="." instance=ExtResource( 4 )]
+
+[node name="Bowl" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015337, 1.10809, 0 )

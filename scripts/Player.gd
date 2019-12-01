@@ -9,7 +9,6 @@ func _ready():
 
 func _on_RigidBody_body_entered(body):
 	var name = body.get_name()
-	print('Egg-san hit', name)
 	if(time == 0):
 		get_node("face").get_child(0).visible = false
 		get_node("face").get_child(1).visible = false

@@ -17,8 +17,9 @@ radius = 1.10952
 [node name="Egg-san" type="RigidBody"]
 physics_material_override = SubResource( 1 )
 continuous_cd = true
-contacts_reported = 10000
+contacts_reported = 10
 contact_monitor = true
+can_sleep = false
 axis_lock_linear_z = true
 axis_lock_angular_z = true
 script = ExtResource( 1 )

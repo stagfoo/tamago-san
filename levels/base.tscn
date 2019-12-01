@@ -19,14 +19,15 @@ transform = Transform( 1.35034, 8.74228e-08, -1.61487e-07, 1.5441e-07, -1.05612e
 
 [node name="Borders" type="Node" parent="."]
 
-[node name="StaticBody" type="StaticBody" parent="Borders"]
+[node name="table" type="StaticBody" parent="Borders"]
 editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 3.97166, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Border - Left" type="CollisionShape" parent="Borders/StaticBody"]
+[node name="Border - Left" type="CollisionShape" parent="Borders/table"]
 transform = Transform( -3.7146e-07, 0, -0.037, 0, 3.27163, 0, 8.49801, 0, -1.61732e-09, -16.104, 3.0943, -0.931058 )
 shape = SubResource( 1 )
 
-[node name="Border - ight" type="CollisionShape" parent="Borders/StaticBody"]
+[node name="Border - ight" type="CollisionShape" parent="Borders/table"]
 transform = Transform( -3.54311e-07, 0.0379393, -0.0369969, 1.75923e-09, 3.27154, 0.000429045, 8.10616, 9.48282e-10, -1.61718e-09, 15.5994, 3.31238, -0.448515 )
 shape = SubResource( 1 )
 

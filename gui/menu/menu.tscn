@@ -1,12 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://gui/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://gui/menu/quit.png" type="Texture" id=2]
 [ext_resource path="res://gui/menu/level-1.png" type="Texture" id=3]
 [ext_resource path="res://gui/menu/level-2.png" type="Texture" id=4]
 [ext_resource path="res://gui/menu/level-3.png" type="Texture" id=5]
-[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=6]
-[ext_resource path="res://gui/menu/round 1.png" type="Texture" id=7]
+[ext_resource path="res://gui/menu/level-4.png" type="Texture" id=6]
+[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=7]
+[ext_resource path="res://gui/menu/round 1.png" type="Texture" id=8]
+[ext_resource path="res://gui/Loading.tscn" type="PackedScene" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
@@ -23,8 +25,11 @@ bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
 [node name="Menu" type="Node2D"]
 
 [node name="ItemList" type="ItemList" parent="."]
-margin_right = 375.0
-margin_bottom = 667.0
+editor/display_folded = true
+margin_left = -90.0
+margin_top = -120.0
+margin_right = 550.0
+margin_bottom = 880.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_clip_content = false
@@ -51,68 +56,49 @@ scale = Vector2( 0.888889, 0.888889 )
 texture = ExtResource( 2 )
 
 [node name="Level_1" type="Button" parent="ItemList"]
-editor/display_folded = true
-margin_left = 29.0
-margin_top = 391.438
-margin_right = 109.0
-margin_bottom = 490.438
-rect_scale = Vector2( 0.991667, 0.709565 )
+margin_left = 130.0
+margin_top = 531.0
+margin_right = 261.0
+margin_bottom = 672.0
+rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
+icon = ExtResource( 3 )
 flat = true
-
-[node name="text" type="Sprite" parent="ItemList/Level_1"]
-position = Vector2( 38.1972, 48.8725 )
-scale = Vector2( 0.575378, 0.720937 )
-texture = ExtResource( 3 )
 
 [node name="Level_2" type="Button" parent="ItemList"]
-editor/display_folded = true
-margin_left = 143.001
-margin_top = 391.438
-margin_right = 223.001
-margin_bottom = 490.438
-rect_scale = Vector2( 0.991667, 0.709565 )
+margin_left = 208.0
+margin_top = 530.0
+margin_right = 339.0
+margin_bottom = 669.0
+rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
+icon = ExtResource( 4 )
 flat = true
-
-[node name="text" type="Sprite" parent="ItemList/Level_2"]
-position = Vector2( 37.7558, 48.8725 )
-scale = Vector2( 0.575378, 0.720937 )
-texture = ExtResource( 4 )
 
 [node name="Level_3" type="Button" parent="ItemList"]
-editor/display_folded = true
-margin_left = 258.203
-margin_top = 391.0
-margin_right = 335.203
-margin_bottom = 490.0
-rect_scale = Vector2( 0.991667, 0.709565 )
+margin_left = 288.0
+margin_top = 530.0
+margin_right = 419.0
+margin_bottom = 669.0
+rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
+icon = ExtResource( 5 )
 flat = true
-
-[node name="text" type="Sprite" parent="ItemList/Level_3"]
-position = Vector2( 39.0802, 49.4895 )
-scale = Vector2( 0.575378, 0.720937 )
-texture = ExtResource( 5 )
+clip_text = true
 
 [node name="Level_4" type="Button" parent="ItemList"]
-editor/display_folded = true
-margin_left = -192.021
-margin_top = 458.615
-margin_right = -112.021
-margin_bottom = 557.615
-rect_scale = Vector2( 0.991667, 0.709565 )
+margin_left = 368.0
+margin_top = 530.0
+margin_right = 499.0
+margin_bottom = 669.0
+rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
+icon = ExtResource( 6 )
 flat = true
-
-[node name="text" type="Sprite" parent="ItemList/Level_4"]
-position = Vector2( 46.1437, 48.8725 )
-scale = Vector2( 0.575378, 0.720937 )
-texture = ExtResource( 3 )
 
 [node name="Level_5" type="Button" parent="ItemList"]
 editor/display_folded = true
@@ -131,7 +117,6 @@ scale = Vector2( 0.575378, 0.720937 )
 texture = ExtResource( 3 )
 
 [node name="Level_6" type="Button" parent="ItemList"]
-editor/display_folded = true
 margin_left = -104.806
 margin_top = 392.946
 margin_right = -24.8064
@@ -147,14 +132,16 @@ scale = Vector2( 0.575378, 0.720937 )
 texture = ExtResource( 3 )
 
 [node name="Logo" type="Sprite" parent="ItemList"]
-position = Vector2( 184.12, 142.127 )
+position = Vector2( 274.12, 272.127 )
 scale = Vector2( 0.544355, 0.544355 )
-texture = ExtResource( 6 )
-
-[node name="round 1" type="Sprite" parent="."]
-position = Vector2( 180, 345.25 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
+
+[node name="round 1" type="Sprite" parent="ItemList"]
+position = Vector2( 270, 465.25 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="Loading" parent="." instance=ExtResource( 9 )]
 [connection signal="pressed" from="ItemList/End Game" to="ItemList" method="_on_Button_pressed"]
 [connection signal="pressed" from="ItemList/Level_1" to="ItemList" method="_on_Button_pressed"]
 [connection signal="pressed" from="ItemList/Level_2" to="ItemList" method="_on_Button_pressed"]
