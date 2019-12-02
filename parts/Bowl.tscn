@@ -11,6 +11,7 @@ absorbent = true
 [sub_resource type="CylinderShape" id=2]
 
 [node name="Bowl" type="RigidBody"]
+transform = Transform( 0.466802, 0, 0.884362, 0, 1, 0, -0.884362, 0, 0.466802, 0, 0, 0 )
 input_ray_pickable = false
 physics_material_override = SubResource( 1 )
 contacts_reported = 10

@@ -31,11 +31,12 @@ func _on_Button_pressed():
 		GLOBALS.loading = false		
 		return
 	if(LEVEL_4.pressed):
-		GLOBALS.goto_scene("res://levels/Level-4.tscn")
+		#todo fix caps
+		GLOBALS.goto_scene("res://levels/level-4.tscn")
 		GLOBALS.loading = false
 		return
 	if(LEVEL_5.pressed):
-		GLOBALS.goto_scene("res://levels/Level-5.tscn")
+		GLOBALS.goto_scene("res://levels/level-5.tscn")
 		GLOBALS.loading = false
 		return
 	pass

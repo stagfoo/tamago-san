@@ -112,6 +112,7 @@ icon = ExtResource( 7 )
 flat = true
 
 [node name="Level_6" type="Button" parent="ItemList"]
+editor/display_folded = true
 margin_left = -104.806
 margin_top = 392.946
 margin_right = -24.8064
