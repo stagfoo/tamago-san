@@ -7,7 +7,7 @@
 [ext_resource path="res://levels/base.tscn" type="PackedScene" id=5]
 [ext_resource path="res://parts/Bowl.tscn" type="PackedScene" id=6]
 
-[node name="Level-1" type="Spatial"]
+[node name="Level-3" type="Spatial"]
 
 [node name="Egg-san" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83263, 12.9993, 0 )

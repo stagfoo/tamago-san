@@ -13,6 +13,27 @@ func _ready():
 
 func _process(delta):
 	LOADING.visible = GLOBALS.loading
+	print()
+	if(GLOBALS.level_1_status == "WIN"):
+		LEVEL_1.get_children()[1].visible = true
+	if(GLOBALS.level_2_status == "WIN"):
+		LEVEL_2.get_children()[1].visible = true
+	if(GLOBALS.level_3_status == "WIN"):
+		LEVEL_3.get_children()[1].visible = true
+	if(GLOBALS.level_4_status == "WIN"):
+		LEVEL_4.get_children()[1].visible = true
+	if(GLOBALS.level_5_status == "WIN"):
+		LEVEL_5.get_children()[1].visible = true
+	if(GLOBALS.level_1_status == "LOSE"):
+		LEVEL_1.get_children()[0].visible = true
+	if(GLOBALS.level_2_status == "LOSE"):
+		LEVEL_2.get_children()[0].visible = true
+	if(GLOBALS.level_3_status == "LOSE"):
+		LEVEL_3.get_children()[0].visible = true
+	if(GLOBALS.level_4_status == "LOSE"):
+		LEVEL_4.get_children()[0].visible = true
+	if(GLOBALS.level_5_status == "LOSE"):
+		LEVEL_5.get_children()[0].visible = true
 	pass
 func _on_Button_pressed():
 	GLOBALS.lose = false

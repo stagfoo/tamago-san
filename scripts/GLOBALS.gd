@@ -6,6 +6,12 @@ var lose = false
 var winTimer = 0
 var loading = false
 
+var level_1_status = null
+var level_2_status = null
+var level_3_status = null
+var level_4_status = null
+var level_5_status = null
+
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
