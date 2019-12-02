@@ -14,6 +14,7 @@ input_capture_on_drag = true
 physics_material_override = SubResource( 1 )
 contacts_reported = 1000
 contact_monitor = true
+can_sleep = false
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true

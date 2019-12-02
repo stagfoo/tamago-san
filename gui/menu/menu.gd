@@ -5,8 +5,10 @@ onready var LEVEL_2 = get_node("Level_2")
 onready var LEVEL_3 = get_node("Level_3")
 onready var LEVEL_4 = get_node("Level_4")
 onready var LEVEL_5 = get_node("Level_5")
+onready var LEVEL_6 = get_node("Level_6")
 onready var END_BUTTON =  get_node("End Game")
 onready var LOADING =  get_node("/root/Loading")
+onready var BG_MUSIC_TOGGLE =  get_parent().get_children()[2]
 
 func _ready():
 	pass
@@ -24,6 +26,8 @@ func _process(delta):
 		LEVEL_4.get_children()[1].visible = true
 	if(GLOBALS.level_5_status == "WIN"):
 		LEVEL_5.get_children()[1].visible = true
+	if(GLOBALS.level_6_status == "WIN"):
+		LEVEL_6.get_children()[1].visible = true
 	if(GLOBALS.level_1_status == "LOSE"):
 		LEVEL_1.get_children()[0].visible = true
 	if(GLOBALS.level_2_status == "LOSE"):
@@ -34,6 +38,8 @@ func _process(delta):
 		LEVEL_4.get_children()[0].visible = true
 	if(GLOBALS.level_5_status == "LOSE"):
 		LEVEL_5.get_children()[0].visible = true
+	if(GLOBALS.level_6_status == "LOSE"):
+		LEVEL_6.get_children()[0].visible = true
 	pass
 func _on_Button_pressed():
 	GLOBALS.lose = false
@@ -60,4 +66,11 @@ func _on_Button_pressed():
 		GLOBALS.goto_scene("res://levels/level-5.tscn")
 		GLOBALS.loading = false
 		return
+	if(LEVEL_6.pressed):
+		GLOBALS.goto_scene("res://levels/level-6.tscn")
+		GLOBALS.loading = false
+		return
+	print(BG_MUSIC_TOGGLE)
+	if(BG_MUSIC_TOGGLE.pressed):
+		GLOBALS.bg_music_status = !GLOBALS.bg_music_status
 	pass

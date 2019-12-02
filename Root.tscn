@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/GLOBALS.gd" type="Script" id=1]
 [ext_resource path="res://gui/menu/menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/bg.ogg" type="AudioStream" id=3]
+[ext_resource path="res://scripts/bg_music.gd" type="Script" id=4]
 
 [node name="Root" type="Node"]
 
@@ -9,3 +11,8 @@
 script = ExtResource( 1 )
 
 [node name="Menu" parent="." instance=ExtResource( 2 )]
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+script = ExtResource( 4 )

@@ -19,6 +19,8 @@ func _on_RigidBody_body_entered(body):
 			GLOBALS.level_4_status = "WIN"
 		if(get_parent().get_name() == 'Level-5'):
 			GLOBALS.level_5_status = "WIN"
+		if(get_parent().get_name() == 'Level-6'):
+			GLOBALS.level_6_status = "WIN"
 		GLOBALS.win = true
 		GLOBALS.lose = false
 	pass # Replace with function body.
