@@ -70,7 +70,6 @@ func _on_Button_pressed():
 		GLOBALS.goto_scene("res://levels/level-6.tscn")
 		GLOBALS.loading = false
 		return
-	print(BG_MUSIC_TOGGLE)
 	if(BG_MUSIC_TOGGLE.pressed):
-		GLOBALS.bg_music_status = !GLOBALS.bg_music_status
+		GLOBALS.bg_music_node.stop()
 	pass

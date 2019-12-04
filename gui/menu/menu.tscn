@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://gui/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://gui/menu/quit.png" type="Texture" id=2]
@@ -10,9 +10,10 @@
 [ext_resource path="res://gui/menu/level-4.png" type="Texture" id=8]
 [ext_resource path="res://gui/menu/level-5.png" type="Texture" id=9]
 [ext_resource path="res://gui/menu/level-6.png" type="Texture" id=10]
-[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=11]
-[ext_resource path="res://gui/menu/round 1.png" type="Texture" id=12]
-[ext_resource path="res://gui/Loading.tscn" type="PackedScene" id=13]
+[ext_resource path="res://gui/menu/level-7.png" type="Texture" id=11]
+[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=12]
+[ext_resource path="res://gui/menu/round 1.png" type="Texture" id=13]
+[ext_resource path="res://gui/Loading.tscn" type="PackedScene" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
@@ -182,12 +183,12 @@ texture = ExtResource( 5 )
 
 [node name="Level_6" type="Button" parent="ItemList"]
 editor/display_folded = true
-margin_left = 70.0
-margin_top = 570.0
-margin_right = 201.0
-margin_bottom = 711.0
+margin_left = 200.0
+margin_top = 580.0
+margin_right = 331.0
+margin_bottom = 721.0
 rect_scale = Vector2( 0.5, 0.5 )
-rect_pivot_offset = Vector2( 280, 100 )
+rect_pivot_offset = Vector2( 20, 82 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
 icon = ExtResource( 10 )
@@ -205,19 +206,45 @@ position = Vector2( 104.639, 141.449 )
 scale = Vector2( 0.452506, 0.452506 )
 texture = ExtResource( 5 )
 
+[node name="Level_7" type="Button" parent="ItemList"]
+editor/display_folded = true
+margin_left = 280.0
+margin_top = 580.0
+margin_right = 411.0
+margin_bottom = 721.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 20, 82 )
+custom_styles/normal = SubResource( 4 )
+action_mode = 0
+icon = ExtResource( 11 )
+flat = true
+
+[node name="lose-cap" type="Sprite" parent="ItemList/Level_7"]
+visible = false
+position = Vector2( 29.639, 141.449 )
+scale = Vector2( 0.452506, 0.452506 )
+texture = ExtResource( 4 )
+
+[node name="win-cap" type="Sprite" parent="ItemList/Level_7"]
+visible = false
+position = Vector2( 104.639, 141.449 )
+scale = Vector2( 0.452506, 0.452506 )
+texture = ExtResource( 5 )
+
 [node name="Logo" type="Sprite" parent="ItemList"]
 position = Vector2( 274.12, 272.127 )
 scale = Vector2( 0.544355, 0.544355 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="round 1" type="Sprite" parent="ItemList"]
 position = Vector2( 270, 465.25 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
-[node name="Loading" parent="." instance=ExtResource( 13 )]
+[node name="Loading" parent="." instance=ExtResource( 14 )]
 
 [node name="music" type="Button" parent="."]
+visible = false
 margin_left = 310.0
 margin_top = 610.0
 margin_right = 345.0
@@ -229,4 +256,5 @@ margin_bottom = 650.0
 [connection signal="pressed" from="ItemList/Level_4" to="ItemList" method="_on_Button_pressed"]
 [connection signal="pressed" from="ItemList/Level_5" to="ItemList" method="_on_Button_pressed"]
 [connection signal="pressed" from="ItemList/Level_6" to="ItemList" method="_on_Button_pressed"]
+[connection signal="pressed" from="ItemList/Level_7" to="ItemList" method="_on_Button_pressed"]
 [connection signal="pressed" from="music" to="ItemList" method="_on_Button_pressed"]

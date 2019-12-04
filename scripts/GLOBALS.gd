@@ -5,7 +5,7 @@ var win = false
 var lose = false
 var winTimer = 0
 var loading = false
-var bg_music_status = true
+var bg_music_node = null
 var level_1_status = null
 var level_2_status = null
 var level_3_status = null
@@ -31,6 +31,8 @@ func _process(delta):
 func goto_scene(path):
 	call_deferred("_deferred_goto_scene", path)
 
+func _music_scene(path):
+	pass
 
 func _deferred_goto_scene(path):
 	current_scene.free()
