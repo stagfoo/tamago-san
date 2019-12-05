@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Tamago-san"
 run/main_scene="res://Root.tscn"
-boot_splash/image="res://gui/Splash.png"
+boot_splash/image="res://gui/splash.png"
 boot_splash/bg_color=Color( 0.886275, 0.376471, 0.219608, 1 )
 config/icon="res://icon.png"
 
