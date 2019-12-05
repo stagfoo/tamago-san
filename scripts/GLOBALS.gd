@@ -12,6 +12,7 @@ var level_3_status = null
 var level_4_status = null
 var level_5_status = null
 var level_6_status = null
+var level_7_status = null
 var root
 
 func _ready():

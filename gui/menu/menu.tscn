@@ -1,19 +1,21 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://gui/menu/menu.gd" type="Script" id=1]
-[ext_resource path="res://gui/menu/quit.png" type="Texture" id=2]
-[ext_resource path="res://gui/menu/level-1.png" type="Texture" id=3]
-[ext_resource path="res://gui/menu/lose-cap.png" type="Texture" id=4]
-[ext_resource path="res://gui/menu/win-cap.png" type="Texture" id=5]
-[ext_resource path="res://gui/menu/level-2.png" type="Texture" id=6]
-[ext_resource path="res://gui/menu/level-3.png" type="Texture" id=7]
-[ext_resource path="res://gui/menu/level-4.png" type="Texture" id=8]
-[ext_resource path="res://gui/menu/level-5.png" type="Texture" id=9]
-[ext_resource path="res://gui/menu/level-6.png" type="Texture" id=10]
-[ext_resource path="res://gui/menu/level-7.png" type="Texture" id=11]
-[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=12]
-[ext_resource path="res://gui/menu/round 1.png" type="Texture" id=13]
-[ext_resource path="res://gui/Loading.tscn" type="PackedScene" id=14]
+[ext_resource path="res://gui/Splash.png" type="Texture" id=2]
+[ext_resource path="res://gui/menu/quit.png" type="Texture" id=3]
+[ext_resource path="res://gui/menu/level-1.png" type="Texture" id=4]
+[ext_resource path="res://gui/menu/lose-cap.png" type="Texture" id=5]
+[ext_resource path="res://gui/menu/win-cap.png" type="Texture" id=6]
+[ext_resource path="res://gui/menu/level-2.png" type="Texture" id=7]
+[ext_resource path="res://gui/menu/level-3.png" type="Texture" id=8]
+[ext_resource path="res://gui/menu/level-4.png" type="Texture" id=9]
+[ext_resource path="res://gui/menu/level-5.png" type="Texture" id=10]
+[ext_resource path="res://gui/menu/level-6.png" type="Texture" id=11]
+[ext_resource path="res://gui/menu/level-7.png" type="Texture" id=12]
+[ext_resource path="res://shaders/wiggle.shader" type="Shader" id=13]
+[ext_resource path="res://gui/menu/Logo.png" type="Texture" id=14]
+[ext_resource path="res://gui/menu/round 1.png" type="Texture" id=15]
+[ext_resource path="res://gui/Loading.tscn" type="PackedScene" id=16]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
@@ -26,6 +28,9 @@ bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.886275, 0.376471, 0.219608, 1 )
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 13 )
 
 [node name="Menu" type="Node2D"]
 
@@ -43,6 +48,11 @@ custom_styles/bg = SubResource( 1 )
 auto_height = true
 script = ExtResource( 1 )
 
+[node name="Splash" type="Sprite" parent="ItemList"]
+position = Vector2( 310.53, 501.627 )
+scale = Vector2( 0.543538, 0.595322 )
+texture = ExtResource( 2 )
+
 [node name="End Game" type="Button" parent="ItemList"]
 editor/display_folded = true
 visible = false
@@ -57,7 +67,7 @@ action_mode = 0
 [node name="quit" type="Sprite" parent="ItemList/End Game"]
 position = Vector2( 198.078, 83.4778 )
 scale = Vector2( 0.888889, 0.888889 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Level_1" type="Button" parent="ItemList"]
 editor/display_folded = true
@@ -68,20 +78,20 @@ margin_bottom = 672.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
-icon = ExtResource( 3 )
+icon = ExtResource( 4 )
 flat = true
 
 [node name="lose-cap" type="Sprite" parent="ItemList/Level_1"]
 visible = false
 position = Vector2( 28, 137 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="win-cap" type="Sprite" parent="ItemList/Level_1"]
 visible = false
 position = Vector2( 103, 137 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Level_2" type="Button" parent="ItemList"]
 editor/display_folded = true
@@ -92,20 +102,20 @@ margin_bottom = 669.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
-icon = ExtResource( 6 )
+icon = ExtResource( 7 )
 flat = true
 
 [node name="lose-cap" type="Sprite" parent="ItemList/Level_2"]
 visible = false
 position = Vector2( 29.6392, 139 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="win-cap" type="Sprite" parent="ItemList/Level_2"]
 visible = false
 position = Vector2( 100.639, 139 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Level_3" type="Button" parent="ItemList"]
 editor/display_folded = true
@@ -116,7 +126,7 @@ margin_bottom = 669.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
-icon = ExtResource( 7 )
+icon = ExtResource( 8 )
 flat = true
 clip_text = true
 
@@ -124,13 +134,13 @@ clip_text = true
 visible = false
 position = Vector2( 29.6392, 139 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="win-cap" type="Sprite" parent="ItemList/Level_3"]
 visible = false
 position = Vector2( 104.639, 139 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Level_4" type="Button" parent="ItemList"]
 editor/display_folded = true
@@ -141,20 +151,20 @@ margin_bottom = 669.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
-icon = ExtResource( 8 )
+icon = ExtResource( 9 )
 flat = true
 
 [node name="lose-cap" type="Sprite" parent="ItemList/Level_4"]
 visible = false
 position = Vector2( 29.6391, 139 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="win-cap" type="Sprite" parent="ItemList/Level_4"]
 visible = false
 position = Vector2( 104.639, 139 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Level_5" type="Button" parent="ItemList"]
 editor/display_folded = true
@@ -166,20 +176,20 @@ rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 280, 100 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
-icon = ExtResource( 9 )
+icon = ExtResource( 10 )
 flat = true
 
 [node name="lose-cap" type="Sprite" parent="ItemList/Level_5"]
 visible = false
 position = Vector2( 29.639, 141.449 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="win-cap" type="Sprite" parent="ItemList/Level_5"]
 visible = false
 position = Vector2( 104.639, 141.449 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Level_6" type="Button" parent="ItemList"]
 editor/display_folded = true
@@ -191,20 +201,20 @@ rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 20, 82 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
-icon = ExtResource( 10 )
+icon = ExtResource( 11 )
 flat = true
 
 [node name="lose-cap" type="Sprite" parent="ItemList/Level_6"]
 visible = false
 position = Vector2( 29.639, 141.449 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="win-cap" type="Sprite" parent="ItemList/Level_6"]
 visible = false
 position = Vector2( 104.639, 141.449 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Level_7" type="Button" parent="ItemList"]
 editor/display_folded = true
@@ -216,32 +226,33 @@ rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 20, 82 )
 custom_styles/normal = SubResource( 4 )
 action_mode = 0
-icon = ExtResource( 11 )
+icon = ExtResource( 12 )
 flat = true
 
 [node name="lose-cap" type="Sprite" parent="ItemList/Level_7"]
 visible = false
 position = Vector2( 29.639, 141.449 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="win-cap" type="Sprite" parent="ItemList/Level_7"]
 visible = false
 position = Vector2( 104.639, 141.449 )
 scale = Vector2( 0.452506, 0.452506 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Logo" type="Sprite" parent="ItemList"]
+material = SubResource( 5 )
 position = Vector2( 274.12, 272.127 )
 scale = Vector2( 0.544355, 0.544355 )
-texture = ExtResource( 12 )
+texture = ExtResource( 14 )
 
 [node name="round 1" type="Sprite" parent="ItemList"]
 position = Vector2( 270, 465.25 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 13 )
+texture = ExtResource( 15 )
 
-[node name="Loading" parent="." instance=ExtResource( 14 )]
+[node name="Loading" parent="." instance=ExtResource( 16 )]
 
 [node name="music" type="Button" parent="."]
 visible = false
