@@ -1,26 +1,25 @@
 extends RigidBody
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+	
+func setLevelStatus(name,status):
+	if(get_parent().get_name() == name):
+		GLOBALS.level_1_status = status
+	pass
 
 func _on_RigidBody_body_entered(body):
 	var name = body.get_name()
 	if(name == 'Egg-san'):
-		print('you WIN')
-		if(get_parent().get_name() == 'Level-1'):
-			GLOBALS.level_1_status = "WIN"
-		if(get_parent().get_name() == 'Level-2'):
-			GLOBALS.level_2_status = "WIN"
-		if(get_parent().get_name() == 'Level-3'):
-			GLOBALS.level_3_status = "WIN"
-		if(get_parent().get_name() == 'Level-4'):
-			GLOBALS.level_4_status = "WIN"
-		if(get_parent().get_name() == 'Level-5'):
-			GLOBALS.level_5_status = "WIN"
-		if(get_parent().get_name() == 'Level-6'):
-			GLOBALS.level_6_status = "WIN"
+		setLevelStatus('Level-1', "WIN")
+		setLevelStatus('Level-2', "WIN")
+		setLevelStatus('Level-3', "WIN")
+		setLevelStatus('Level-4', "WIN")
+		setLevelStatus('Level-5', "WIN")
+		setLevelStatus('Level-6', "WIN")
+		setLevelStatus('Level-7', "WIN")
+		setLevelStatus('Level-8', "WIN")
+		setLevelStatus('Level-9', "WIN")
+		setLevelStatus('Level-10', "WIN")
 		GLOBALS.win = true
 		GLOBALS.lose = false
 	pass # Replace with function body.
+	
+

@@ -38,6 +38,7 @@ shader = ExtResource( 16 )
 [node name="Menu" type="Node2D"]
 
 [node name="ItemList" type="ItemList" parent="."]
+editor/display_folded = true
 margin_left = -90.0
 margin_top = -120.0
 margin_right = 550.0

@@ -34,10 +34,16 @@ func goto_scene(path):
 
 func _music_scene(path):
 	pass
-
+	
 func _deferred_goto_scene(path):
 	current_scene.free()
 	var s = ResourceLoader.load(path)
 	current_scene = s.instance()
 	get_tree().get_root().add_child(current_scene)
 	get_tree().set_current_scene(current_scene)
+	pass
+	
+func setLevelStatus(name,status):
+	if(get_parent().get_name() == name):
+		GLOBALS.level_1_status = status
+	pass
